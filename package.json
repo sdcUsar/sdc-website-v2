@@ -10,6 +10,7 @@
     "lint:fix": "next lint --fix",
     "lint:strict": "next lint '*/**/*.{js,ts,tsx}'",
     "check-types": "tsc --pretty --noEmit",
+    "format": "prettier --write .",
     "prettier": "prettier --write */**/*.{js,json,ts,tsx,css,md}",
     "prepare": "husky"
   },
