@@ -11,10 +11,10 @@ const PhotoAlbum = ({ className }: { className?: string }) => {
     >
       <div className="absolute flex gap-4 z-0 text-4xl sm:text-6xl font-extrabold">
         Life At
-        <AnimatedGradientText >
+        <AnimatedGradientText>
           <span
             className={cn(
-              `hidden lg:inline animate-gradient bg-gradient-to-r from-[#22B4F8] to-[#2d7ca1] via-[#EDF3C2] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent mx`,
+              `hidden lg:inline animate-gradient bg-gradient-to-r from-[#22B4F8] to-[#2d7ca1] via-[#EDF3C2] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent mx`
             )}
           >
             SDC
