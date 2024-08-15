@@ -1,5 +1,7 @@
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import AnimatedGradientText from "./AnimatingGradientText";
+
 const PhotoAlbum = ({ className }: { className?: string }) => {
   return (
     <section
@@ -7,8 +9,17 @@ const PhotoAlbum = ({ className }: { className?: string }) => {
         "relative w-full flex justify-center items-center text-white flex-col h-[80vh] px-4 mb-14 mt-auto"
       )}
     >
-      <div className="absolute z-0 text-6xl font-extrabold">
-        Life At <span className="text-blue-500">SDC</span>
+      <div className="absolute flex gap-4 z-0 text-4xl sm:text-6xl font-extrabold">
+        Life At
+        <AnimatedGradientText >
+          <span
+            className={cn(
+              `hidden lg:inline animate-gradient bg-gradient-to-r from-[#22B4F8] to-[#2d7ca1] via-[#EDF3C2] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent mx`,
+            )}
+          >
+            SDC
+          </span>
+        </AnimatedGradientText>
       </div>
 
       <div className="z-10 w-full max-h-full flex flex-row flex-wrap justify-center items-center overflow-hidden gap-y-4 gap-3">
