@@ -1,12 +1,12 @@
 "use client";
-import Link from "next/link";
-import React, { useState } from "react";
-import { usePathname } from "next/navigation";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
-import MenuOverlay from "./MenuOverlay";
-import NavLinks from "./NavLinks";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import React, { useState } from "react";
+import MenuOverlay from "./MenuOverlay";
+import NavLinks from "./NavLinks";
 
 const navLinks = [
   {
@@ -36,7 +36,6 @@ const Navbar: React.FC<NavBarProps> = ({ isClicked }) => {
   const [navbarOpen, setNavbarOpen] = useState(false);
   const pathname = usePathname(); // Get the current route
 
-  // bg-[#121212]
   return (
     // <motion.nav
     //     className='top-0 left-0 right-0 z-10 transparent bg-opacity-100'

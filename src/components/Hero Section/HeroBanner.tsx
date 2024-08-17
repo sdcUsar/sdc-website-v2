@@ -1,10 +1,9 @@
 "use client";
-import React, { useState } from "react";
-import HeroVideo from "../../../public/HeroVideo.mp4";
 import Image from "next/image";
+import { useState } from "react";
+import HeroVideo from "../../../public/HeroVideo.mp4";
 import sdcLogo from "../../../public/sdcLogo.png";
 import Navbar from "../Navbar/Navbar";
-
 const HeroBanner = () => {
   const [isClicked, setIsClicked] = useState(false);
 
@@ -68,9 +67,7 @@ const HeroBanner = () => {
           isClicked ? "opacity-100" : "opacity-0"
         } absolute bottom-10 left-1/2 transform -translate-x-1/2`}
       >
-        <div className="font-[michroma] text-white text-[40px] leading-[56.88px] font-thin">
-          Software Development Cell
-        </div>
+        <Image src={"/images/sdc"} alt="sdc" height={100} width={1000} />
       </div>
     </div>
   );
