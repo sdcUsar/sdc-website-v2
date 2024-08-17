@@ -28,7 +28,7 @@ const HeroBanner = () => {
         Your browser does not support the video tag.
       </video>
 
-      {/* <Navbar className={`${isClicked ? "opacity-100" : "opacity-0"}`}/> */}
+      <Navbar isClicked={isClicked} />
 
       {/* SDC Logo and Text */}
       <div
