@@ -1,3 +1,4 @@
+
 import Events from "@/components/Events";
 import EventsPage from "@/components/EventsPage";
 import TestMotion from "@/components/TestMotion";
@@ -6,8 +7,9 @@ import TestMotion from "@/components/TestMotion";
 
 export default function Home() {
   return (
-    // <EventsPage/>
-    // <TestMotion/>
-    <EventsPage/>
+    <main className="flex min-h-screen flex-col items-center justify-between bg-black">
+       <PhotoAlbum />
+
+    </main>
   );
 }
