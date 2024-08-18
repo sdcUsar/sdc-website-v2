@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image"; // Use next/image for better performance
 
 const events = [
   {
@@ -41,9 +42,10 @@ const fadeInRight = {
 
 const EventsPage: React.FC = () => {
   return (
-    <div className="bg-black text-white py-10 h-screen overflow-y-auto">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold mb-10">Events</h1>
+    <div className="bg-black text-white py-10 overflow-y-auto font-Raleway p-7 sm:p-14 lg:p-24 px-2 sm:px-10 space-y-10">
+      <div className="container mx-auto px-4 ">
+        {/* <h1 className="text-4xl font-bold mb-10">Events</h1> */}
+        <h1 className="font-semibold text-3xl lg:text-4xl">Events</h1>
         {events.map((event, index) => (
           <motion.div
             key={index}
@@ -52,17 +54,19 @@ const EventsPage: React.FC = () => {
             }`}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.9 }}
-            transition={{ delay: index * 0.2, duration: 10, ease: "easeIn" }}
+            viewport={{ once: false, amount: 0.5 }} // Adjusted viewport settings
+            transition={{ delay: index * 0.2, duration: 0.5, ease: "easeIn" }} // Reduced duration for smoother animation
           >
             <motion.div
               variants={index % 2 === 1 ? fadeInLeft : fadeInRight}
               className="md:w-1/2 flex justify-center items-center"
             >
-              <img
+              <Image
                 src={event.imageUrl}
                 alt={event.title}
                 className="max-w-full rounded-md shadow-lg h-80"
+                width={500}
+                height={320}
               />
             </motion.div>
             <motion.div

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import MenuOverlay from "./MenuOverlay";
 import NavLinks from "./NavLinks";
 
@@ -36,6 +36,50 @@ const Navbar: React.FC<NavBarProps> = ({ isClicked }) => {
   const [navbarOpen, setNavbarOpen] = useState(false);
   const pathname = usePathname(); // Get the current route
 
+  // const [navbarOpacity, setNavbarOpacity] = useState(0);
+  const [navbarOpaque, setNavbarOpaque] = useState(false);
+
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const threshold = window.innerHeight; // 100vh
+
+  //     // Calculate opacity based on scroll position relative to 100vh
+  //     const opacity = Math.min(window.scrollY / threshold, 1);
+  //     setNavbarOpacity(opacity); // Set the opacity between 0 and 1
+  //   };
+
+  //   window.addEventListener("scroll", handleScroll);
+
+  //   // Initial check in case user starts at a scroll position greater than the threshold
+  //   handleScroll();
+
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
+
+    useEffect(() => {
+    const handleScroll = () => {
+      const threshold = window.innerHeight * 0.93; // 60vh
+
+      // Set navbar to opaque if scroll position is greater than 100vh
+      if (window.scrollY > threshold) {
+        setNavbarOpaque(true);
+      } else {
+        setNavbarOpaque(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Initial check in case user starts at a scroll position greater than the threshold
+    handleScroll();
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     // <motion.nav
     //     className='top-0 left-0 right-0 z-10 transparent bg-opacity-100'
@@ -56,6 +100,16 @@ const Navbar: React.FC<NavBarProps> = ({ isClicked }) => {
       className={`fixed top-0 left-0 right-0 z-10 transition-opacity duration-[900ms] ease-in-out ${
         isClicked ? "opacity-100" : "opacity-0"
       }`}
+      // style={{
+      //   backgroundColor: `rgba(0, 0, 156, ${navbarOpacity})`, // Black with variable opacity
+      //   transition: 'background-color', // Smooth transition for background color
+      // }}
+      style={{
+        backgroundColor: navbarOpaque
+          ? `rgba(0, 0, 0, 1)` // Fully opaque background
+          : `rgba(0, 0, 0, 0)`, // Transparent background
+        transition: "background-color 0.5s ease-in-out", // Smooth transition for background color
+      }}
     >
       <div className="flex items-center justify-between mx-auto px-12 py-4">
         <div className="flex-grow">
