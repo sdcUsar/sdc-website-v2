@@ -4,6 +4,7 @@ import HeroBanner from "@/components/Hero Section/HeroBanner";
 import Navbar from "@/components/Navbar/Navbar";
 import PhotoAlbum from "@/components/PhotoAlbum";
 import AboutUs from "@/components/about-us/about";
+import FacultySection from "@/components/Faculty/FacultySection";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <main className="flex min-h-screen flex-col items-center justify-between bg-black">
         <PhotoAlbum />
         <EventsPage/>
+        <FacultySection/>
       <Footer />
       </main>
     </div>
