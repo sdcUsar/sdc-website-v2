@@ -1,4 +1,3 @@
-
 "use client";
 import React, { useState } from "react";
 import FacultyCard from "../Faculty/FacultyCard";
@@ -21,13 +20,13 @@ const FacultySection: React.FC = () => {
     <div className="min-w-full overflow-hidden">
       {/* Main container for faculty section */}
       <div
-        className={`p-8 bg-white border-black border-[15px] rounded-[90px] .raleway-font min-w-full transition-all duration-1000 ${
-          hoveredFaculty == null ? "h-[700px]" : "h-[500px]"
+        className={`mx-6 p-4 md:bg-white md:text-black text-white border-black border-[15px] rounded-[40px] .raleway-font transition-all duration-1000 ${
+          hoveredFaculty == null ? "h-[600px]" : "h-[500px]"
         }`}
       >
         <h2 className="text-6xl px-20  py-5 font-bold  mb-6">Faculty</h2>
         {/* Container for faculty cards */}
-        <div className="flex  min-w-full justify-between gap-8">
+        <div className="grid grid-flow-col px-20 min-w-full justify-between gap-4">
           {/* Dr. Arvinder Kaur's card */}
           <div
             onMouseEnter={() => handleMouseEnter("arvinder")}

@@ -19,8 +19,8 @@ const FacultyCard: React.FC<FacultyCardProps> = ({
       <Image
         src={imageSrc}
         alt={name}
-        width={400}
-        height={400}
+        width={300}
+        height={300}
         className={cn("rounded-lg transition-all duration-1000 relative z-1", {
           "origin-top-left scale-[0.7]": hovered === "arvinder", // Scale and position the image based on the hovered faculty member
           "origin-top-right scale-[0.7]": hovered === "rahul",
