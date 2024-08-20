@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.1.5",
+    "@radix-ui/react-dialog": "^1.1.1",
     "@typescript-eslint/eslint-plugin": "^8.0.1",
     "@typescript-eslint/parser": "^8.0.1",
     "class-variance-authority": "^0.7.0",
