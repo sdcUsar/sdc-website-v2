@@ -43,35 +43,38 @@ const fadeInRight = {
 const EventsPage: React.FC = () => {
   return (
     <div className="bg-black text-white py-10 overflow-y-auto font-Raleway p-7 sm:p-14 lg:p-24 px-2 sm:px-10 space-y-10">
-      <div className="container mx-auto px-4 ">
-        {/* <h1 className="text-4xl font-bold mb-10">Events</h1> */}
-        <h1 className="font-semibold text-3xl lg:text-4xl">Events</h1>
+      <div className="container mx-auto px-4">
+        <h1 className="font-semibold text-3xl lg:text-4xl mb-2">Events</h1>
         {events.map((event, index) => (
           <motion.div
             key={index}
-            className={`flex flex-col md:flex-row mb-16 h-96 ${
-              index % 2 !== 1 ? "md:flex-row-reverse" : ""
+            className={`flex flex-col mb-16 h-auto gap-2 sm:h-96 ${
+              index % 2 !== 1 ? "sm:flex-row-reverse" : "sm:flex-row"
             }`}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.5 }} // Adjusted viewport settings
-            transition={{ delay: index * 0.2, duration: 0.5, ease: "easeIn" }} // Reduced duration for smoother animation
+            viewport={{ once: false, amount: 0.5 }}
+            transition={{
+              delay: index * 0.2,
+              duration: 0.5,
+              ease: "easeIn",
+            }}
           >
             <motion.div
               variants={index % 2 === 1 ? fadeInLeft : fadeInRight}
-              className="md:w-1/2 flex justify-center items-center"
+              className="sm:w-1/2 flex justify-center items-center"
             >
               <Image
                 src={event.imageUrl}
                 alt={event.title}
-                className="max-w-full rounded-md shadow-lg h-80"
+                className="max-w-full rounded-3xl shadow-lg h-80 sm:h-full"
                 width={500}
                 height={320}
               />
             </motion.div>
             <motion.div
               variants={index % 2 === 1 ? fadeInRight : fadeInLeft}
-              className="md:w-1/2 md:pl-10 flex flex-col justify-center"
+              className="sm:w-1/2 sm:pl-10 flex flex-col justify-center"
             >
               <h2 className="text-3xl font-bold mb-4">{event.title}</h2>
               <p>{event.description}</p>
