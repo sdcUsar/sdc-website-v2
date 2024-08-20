@@ -9,7 +9,7 @@ const PhotoAlbum = ({ className }: { className?: string }) => {
   return (
     <section
       className={cn(
-        "relative  w-full flex justify-center items-center text-white flex-col h-[80vh] px-4 mb-14 mt-auto"
+        "relative  w-full flex justify-center items-center text-white flex-col h-screen px-4 mb-14 mt-auto"
       )}
     >
       <div className="absolute flex gap-4 z-0 text-4xl  md:text-6xl font-extrabold">
@@ -25,11 +25,11 @@ const PhotoAlbum = ({ className }: { className?: string }) => {
         </AnimatedGradientText>
       </div>
 
-      <div className=" px-0 md:px-6 z-10 w-full max-h-full flex flex-row flex-wrap justify-center items-center overflow-hidden gap-y-5 gap-x-4">
+      <div className=" px-0 md:px-6 z-10 w-full max-h-full flex flex-row flex-wrap justify-around items-center overflow-hidden gap-y-5 gap-x-4">
         {Array.from({ length: TOTAL_IMAGES }, (_, index) => (
           <div
             key={index}
-            className="h-[15%] sm:h-[25%] lg:h-[32%] transition-all aspect-square  rounded-xl object-cover opacity-0 -translate-y-[30px] scale-100 hover:opacity-100 hover:transform-none "
+            className="h-[30%] transition-all aspect-square  rounded-xl object-cover opacity-0 -translate-y-[30px] scale-100 hover:opacity-100 hover:transform-none "
           >
             <Image
               src={`/${PREFIX}${index + 1}.jpg`}
