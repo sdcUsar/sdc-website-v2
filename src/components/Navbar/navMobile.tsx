@@ -8,6 +8,7 @@ import {
   SheetContent,
 } from "@/components/ui/sheet";
 import Image from "next/image";
+import Link from "next/link";
 
 type Link = {
   path: string;
@@ -64,6 +65,7 @@ const MenuOverlay: React.FC<Props> = ({ links, closeNavbar }) => {
               );
             })}
           </ul>
+          <Link href="/hackedcode">
           <Image
               src="/svg/hackedcode.png"
               alt="University Logo"
@@ -71,6 +73,9 @@ const MenuOverlay: React.FC<Props> = ({ links, closeNavbar }) => {
               height={100}
               className="w-full "
             />
+            
+          </Link>
+          
         </SheetContent>
       </Sheet>
     </div>
