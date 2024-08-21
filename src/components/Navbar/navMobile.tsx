@@ -65,7 +65,7 @@ const MenuOverlay: React.FC<Props> = ({ links, closeNavbar }) => {
               );
             })}
           </ul>
-          <Link href="/hackedcode">
+          <Link href="/hackedcode" target="_blank">
           <Image
               src="/svg/hackedcode.png"
               alt="University Logo"
