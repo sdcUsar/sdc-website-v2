@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes borderColorChange {
+  0% {
+    border-color: purple;
+  }
+  25% {
+    border-color: blue;
+  }
+  50% {
+    border-color: green;
+  }
+  75% {
+    border-color: yellow;
+  }
+  100% {
+    border-color: purple;
+  }
+}
+
+.hover\\:border-animation:hover {
+  @apply border-8;
+  animation: borderColorChange 2s infinite;
+}

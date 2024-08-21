@@ -8,9 +8,10 @@ export default function AboutUs() {
 
         <div className="  justify-evenly space-y-8 lg:space-y-12 mb-10 lg:mb-20">
         <h1 className="font-semibold text-3xl lg:text-4xl">About us</h1>
-          <p className="text-left md:text-justify h-fit text-base sm:text-lg lg:text-3xl text-gray-300 leading-relaxed">
-          Our department leads GGSIPU's digital transformation, creating software to enhance faculty and student operations. With top students, we streamline tasks, improve management, and connect the campus, driving educational innovation and efficiency.
-          </p>
+        <p className="text-left md:text-justify h-fit text-base sm:text-lg lg:text-3xl text-gray-300 leading-relaxed">
+  Our department leads GGSIPU&rsquo;s digital transformation, creating software to enhance faculty and student operations. With top students, we streamline tasks, improve management, and connect the campus, driving educational innovation and efficiency.
+</p>
+
         </div>
           <div className="grid grid-flow-col w-24 md:hidden ">
             <SocialMediaTransition />

@@ -1,73 +1,93 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import FacultyCard from "../Faculty/FacultyCard";
 
 const FacultySection: React.FC = () => {
-  // State to track which faculty member is being hovered over
   const [hoveredFaculty, setHoveredFaculty] = useState<string | null>(null);
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
-  // Function to handle mouse enter event
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   const handleMouseEnter = (faculty: string) => {
     setHoveredFaculty(faculty);
   };
 
-  // Function to handle mouse leave event
+  const handleCardClick = (faculty: string) => {
+    if(hoveredFaculty) return setHoveredFaculty(null);
+    setHoveredFaculty(faculty);
+  };
   const handleMouseLeave = () => {
     setHoveredFaculty(null);
   };
 
+  console.log(hoveredFaculty);
   return (
-    <div className="min-w-full overflow-hidden">
+    <div className="min-w-full ">
       {/* Main container for faculty section */}
       <div
-        className={`mx-6 p-4 md:bg-white md:text-black text-white border-black border-[15px] rounded-[40px] .raleway-font transition-all duration-1000 ${
-          hoveredFaculty == null ? "h-[600px]" : "h-[500px]"
-        }`}
+        className={` p-8 bg-transparent border-none rounded-none raleway-font min-w-full  transition-all duration-1000 ${
+          hoveredFaculty == null ? "h-[700px]" : "h-[500px]"
+        } md:bg-white md:border-black md:border-[15px] md:rounded-[90px]`}
       >
-        <h2 className="text-6xl px-20  py-5 font-bold  mb-6">Faculty</h2>
+        <h2 className="text-6xl px-20 py-5 font-bold mb-6 md:text-black text-white">Faculty</h2>
         {/* Container for faculty cards */}
-        <div className="grid grid-flow-col px-20 min-w-full justify-between gap-4">
+        <div className="flex min-w-full justify-between gap-8">
           {/* Dr. Arvinder Kaur's card */}
           <div
             onMouseEnter={() => handleMouseEnter("arvinder")}
             onMouseLeave={handleMouseLeave}
-            className="relative cursor-pointer "
+            onClick={() => handleCardClick("arvinder")}
+            className="relative cursor-pointer"
           >
             <FacultyCard
               imageSrc="/DeanMam.png"
               name="Dr. Arvinder Kaur"
-              className={
-                hoveredFaculty == "rahul"
-                  ? "-translate-x-full scale-y-75 opacity-0 transition-all duration-1000"
+              className={`
+                transition-all duration-1000
+                ${
+                hoveredFaculty === "rahul"
+                  ? "-translate-x-full scale-y-75 opacity-0"
                   : ""
-              }
-              hovered={hoveredFaculty}
+              } md:text-black text-white `}
+              hovered={screenWidth>=700 ? hoveredFaculty :null}
             />
           </div>
           {/* Dr. Rahul Johari's card */}
           <div
             onMouseEnter={() => handleMouseEnter("rahul")}
             onMouseLeave={handleMouseLeave}
+            onClick={() => handleCardClick("rahul")}
             className="relative cursor-pointer"
           >
             <FacultyCard
               imageSrc="/RahulJohriSir.png"
               name="Dr. Rahul Johari"
-              className={
+              className={`
+                transition-all duration-1000
+                ${
                 hoveredFaculty == "arvinder"
-                  ? "translate-x-full scale-y-75 opacity-0 transition-all duration-1000"
+                  ? "translate-x-full scale-y-75 opacity-0 "
                   : ""
-              }
-              hovered={hoveredFaculty}
+              } md:text-black text-white  `}
+              hovered={screenWidth>=700 ? hoveredFaculty :null}
             />
           </div>
         </div>
       </div>
       {/* Container for faculty descriptions */}
-      <div className="text-white  px-8 mt-5 text-[24px] w-full relative font-Raleway font-light h-[200px]">
-        {/* Dr. Rahul Johari's description */}
+      <div className="text-white px-8 -mt-10 md:mt-5  text-xs md:text-2xl w-full relative font-Raleway font-light h-[200px]">
         {hoveredFaculty === "rahul" && (
-          <p className="pr-10 pl-32 text-end absolute  w-full  ">
+          <p className="pr-10 pl-32 text-end  absolute top-0 right-0 w-full ">
             Dr. Rahul Johari, a distinguished educator at USAR, GGSIPU, holds
             key leadership roles including Head of the Software Development Cell
             and Founder of the SWINGER Lab. A Microsoft Certified Professional,
@@ -76,9 +96,8 @@ const FacultySection: React.FC = () => {
             consecutive years.
           </p>
         )}
-        {/* Dr. Arvinder Kaur's description */}
         {hoveredFaculty === "arvinder" && (
-          <p className="pl-10 pr-32 text-start absolute top-0 left-0 w-full ">
+          <p className="pl-10 pr-32 text-start absolute top-0 left-0 w-full">
             Dr. Arvinder Kaur, Dean of USAR and USDI at GGSIPU East Campus, is a
             highly skilled educator with expertise in Mathematical Modeling,
             Curriculum Development, and E-Learning. Formerly Dean of USICT, she

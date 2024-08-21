@@ -42,7 +42,7 @@ const fadeInRight = {
 
 const EventsPage: React.FC = () => {
   return (
-    <div className="bg-black text-white py-10 overflow-y-auto font-Raleway p-7 sm:p-14 lg:p-24 px-2 sm:px-10 space-y-10">
+    <div className="bg-black text-white py-10 overflow-y-auto font-Raleway p-7 sm:p-14 lg:p-20 px-2 sm:px-10 space-y-10">
       <div className="container mx-auto px-4">
         <h1 className="font-semibold text-3xl lg:text-4xl mb-2">Events</h1>
         {events.map((event, index) => (
