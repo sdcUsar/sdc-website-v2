@@ -104,13 +104,13 @@ export const graphic_team = [
       "https://www.linkedin.com/in/vedant-sharma-477640190?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     twitterLink: "",
   },
-  {
-    name: "Shreya Shree",
-    title: "Graphic Designer",
-    imageUrl: "/teamPic/shreya.JPG",
-    linkedIn: "https://www.linkedin.com/in/shreya-shree-a0427427b",
-    twitterLink: "https://twitter.com/shreyashree_",
-  },
+  // {
+  //   name: "Shreya Shree",
+  //   title: "Graphic Designer",
+  //   imageUrl: "/teamPic/shreya.JPG",
+  //   linkedIn: "https://www.linkedin.com/in/shreya-shree-a0427427b",
+  //   twitterLink: "https://twitter.com/shreyashree_",
+  // },
   {
     name: "Manika Sethi",
     title: "Graphic Designer",
@@ -142,29 +142,29 @@ export const ui_team = [
     linkedIn: "",
     twitterLink: "",
   },
-  {
-    name: "Vedant",
-    title: "Graphic Designer",
-    imageUrl: "/teamPic/vedant.JPG",
-    linkedIn: "",
-    twitterLink: "",
-  },
+  // {
+  //   name: "Vedant",
+  //   title: "Graphic Designer",
+  //   imageUrl: "/teamPic/vedant.JPG",
+  //   linkedIn: "",
+  //   twitterLink: "",
+  // },
 ];
 
 export const appdev_team = [
-  {
-    name: "Ayush Aggarwal",
-    title: "Developer, App Team",
-    imageUrl: "/teamPic/ayush.JPG",
-    linkedIn: "https://www.linkedin.com/in/ayush80942",
-    twitterLink: "https://twitter.com/ayush80942",
-  },
+  // {
+  //   name: "Ayush Aggarwal",
+  //   title: "Developer, App Team",
+  //   imageUrl: "/teamPic/ayush.JPG",
+  //   linkedIn: "https://www.linkedin.com/in/ayush80942",
+  //   twitterLink: "https://twitter.com/ayush80942",
+  // },
 
-  {
-    name: "Manika Sethi",
-    title: "Developer, App Team",
-    imageUrl: "/teamPic/manika.JPG",
-    linkedIn: "https://www.linkedin.com/in/manika-sethi",
-    twitterLink: "",
-  },
+  // {
+  //   name: "Manika Sethi",
+  //   title: "Developer, App Team",
+  //   imageUrl: "/teamPic/manika.JPG",
+  //   linkedIn: "https://www.linkedin.com/in/manika-sethi",
+  //   twitterLink: "",
+  // },
 ];

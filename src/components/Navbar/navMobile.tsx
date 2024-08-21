@@ -56,7 +56,7 @@ const MenuOverlay: React.FC<Props> = ({ links, closeNavbar }) => {
           </button>
           <ul className="flex flex-col items-start py-4">
             {links.map((link, index) => {
-              if (index === 2) return null; // Skip rendering if index is 4
+              // if (index === 2) return null; // Skip rendering if index is 4
               return (
                 <li key={index} onClick={handleClose} className="mb-4">
                   <NavLinks href={link.path} title={link.title} icon={link.icon} />

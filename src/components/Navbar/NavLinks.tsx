@@ -13,11 +13,12 @@ type Props = {
   title: string;
   icon?: IconProps; // Updated to match the new icon structure
   className?: string; // Optional className prop
+  newTab?: boolean;
 };
 
-const NavLinks = ({ href, title, icon, className }: Props) => {
+const NavLinks = ({ href, title, icon, className , newTab = false}: Props) => {
   return (
-    <Link href={href} className={className}>
+    <Link href={href} className={className}  target={newTab ? '_blank' : '_self'} >
       <div className="flex items-center gap-5 space-x-2 py-2 pl-3 pr-4 text-white">
         {icon && (
           <span className="flex-shrink-0">

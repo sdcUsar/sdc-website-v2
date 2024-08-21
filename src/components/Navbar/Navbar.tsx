@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { Bars3Icon, HomeIcon, UserGroupIcon } from "@heroicons/react/24/solid";
+import { Bars3Icon } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-// import MenuOverlay from "./MenuOverlay";
 import NavLinks from "./NavLinks";
 import MenuOverlay from "./navMobile";
+
 
 const navLinks = [
   {
@@ -20,28 +20,19 @@ const navLinks = [
     }
   },
   {
-    title: "Blogs",
-    path: "/event",
-    icon: {
-      src: "/svg/blogs.svg",
-      alt: "Blogs",
-      width: 40,
-      height: 40
-    }
-  },
-  {
     title: "HackEDCode",
-    path: "/hack-ed-code",
+    path: '/hackedcode',
     icon: {
       src: "/svg/blogs.svg",
       alt: "HackEDCode",
       width: 40,
       height: 40
-    }
+    },
+    newTab: true // add this property to open in a new tab
   },
   {
     title: "Team",
-    path: "/team",
+    path: "/teams",
     icon: {
       src: "/svg/teams.svg",
       alt: "Team",
@@ -58,13 +49,11 @@ interface NavBarProps {
 const Navbar: React.FC<NavBarProps> = ({ isClicked }) => {
   const [navbarOpen, setNavbarOpen] = useState(false);
   const pathname = usePathname(); 
-
   const [navbarOpaque, setNavbarOpaque] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       const threshold = window.innerHeight * 0.93;
-
       if (window.scrollY > threshold) {
         setNavbarOpaque(true);
       } else {
@@ -85,7 +74,7 @@ const Navbar: React.FC<NavBarProps> = ({ isClicked }) => {
       initial={{ y: "-100%", opacity: 0 }}
       animate={{ y: isClicked ? "0%" : "-100%", opacity: isClicked ? 1 : 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
-      className={`fixed top-0 left-0 right-0 z-10 transition-opacity duration-[900ms] ease-in-out ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-opacity duration-[900ms] ease-in-out ${
         isClicked ? "opacity-100" : "opacity-0"
       }`}
       style={{
@@ -96,7 +85,7 @@ const Navbar: React.FC<NavBarProps> = ({ isClicked }) => {
       }}
     >
       <div className="flex items-center justify-between mx-auto px-12 py-4">
-        <div className="flex-grow  opacity-0 sm:opacity-100">
+        <div className="flex-grow opacity-0 sm:opacity-100">
           <Link href={"/"}>
             <Image
               src="/logo.png"
@@ -107,8 +96,8 @@ const Navbar: React.FC<NavBarProps> = ({ isClicked }) => {
             />
           </Link>
         </div>
-{/* this needs to be fixed */}
-{        <div className="mobile-menu block md:hidden">
+
+        <div className="mobile-menu block md:hidden">
 {!navbarOpen ? (
     <button
     onClick={() => setNavbarOpen(!navbarOpen)}
@@ -117,7 +106,8 @@ const Navbar: React.FC<NavBarProps> = ({ isClicked }) => {
     <Bars3Icon className="h-5 w-5" />
   </button>
           ) : null}
-        </div>}
+        </div>
+
         <div className="menu hidden md:block md:w-auto" id="navBar">
           <ul className="flex p-4 gap-4 md:p-0 md:flex-row md:space-x-8 mt-0">
             {navLinks.map((link, index) => (
@@ -128,6 +118,7 @@ const Navbar: React.FC<NavBarProps> = ({ isClicked }) => {
                   className={`text-white ${
                     pathname === link.path ? " underline font-bold " : ""
                   }  hover:underline`}
+                  newTab={link.newTab} // pass the newTab prop to the NavLinks component
                 />
               </li>
             ))}
