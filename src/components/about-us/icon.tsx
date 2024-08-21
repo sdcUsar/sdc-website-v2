@@ -12,21 +12,26 @@ const SocialMediaTransition: React.FC = () => {
 
   return (
     <>
-      <div className="relative w-fit h-fit space-y-3">
-        <h1 className="uppercase">Follow us</h1>
-        <div className="flex items-center">
+      <div className="relative w-20  md:w-fit  space-y-3">
+        <h1 className="uppercase hidden md:block">Follow us</h1>
+        <div className="flex flex-col md:flex-row items-center">
           <button
             onClick={handleToggle}
-            className={`absolute align-top text-4xl md:text-7xl text-white transition-transform duration-500 ease-in-out ${
+            className={`relative md:absolute  text-4xl md:text-7xl text-white 
+              transition-transform duration-500 ease-in-out ${
               visible ? "-rotate-45" : "rotate-0"
             }`}
           >
             +
           </button>
           <div
-            className={`flex space-x-7 align-middle items-center transition-transform duration-[2.8s] ease-in-out ${
-              visible ? "translate-x-10 delay-100" : "translate-x-5 opacity-0"
-            } ml-7`}
+            className={`flex flex-col md:flex-row space-y-7 md:space-y-0 md:space-x-7 align-middle 
+              items-center justify-center transition-transform duration-[2.8s] ease-in-out 
+              ${
+                visible ? "translate-y-10 md:translate-y-0 delay-100" : "translate-y-5 md:translate-y-0 opacity-0"
+              }  ${
+               visible ? "md:translate-x-10 delay-100" : "md:translate-x-5 opacity-0"
+             } md:ml-7`}
           >
             <a href="#" className="p-1 bg-white rounded-2xl">
               <div className="group transition-all ease-in-out">
@@ -136,4 +141,3 @@ const SocialMediaTransition: React.FC = () => {
 };
 
 export default SocialMediaTransition;
-
