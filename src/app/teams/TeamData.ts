@@ -36,6 +36,14 @@ export const web_team = [
     linkedIn: "https://www.linkedin.com/in/nikhil-chopra-238334270",
     twitterLink: "https://twitter.com/nikhilchopra_",
   },
+
+  {
+    name: "Karan Bhatia",
+    title: "Developer, Web Team",
+    imageUrl: "/teamPic/karan.JPG",
+    linkedIn: "https://www.linkedin.com/in/karanbhatia3420/",
+    twitterLink: "https://twitter.com/karanbhatia_",
+  },
   {
     name: "Sabhya Agarwal",
     title: "Developer, Web Team",
@@ -50,13 +58,7 @@ export const web_team = [
     linkedIn: "https://linkedin.com/in/ansh-garg-777ab7258",
     twitterLink: "https://twitter.com/anshgarg_",
   },
-  {
-    name: "Shreya Shree",
-    title: "Content & Graphics Team",
-    imageUrl: "/teamPic/shreya.JPG",
-    linkedIn: "https://www.linkedin.com/in/shreya-shree-a0427427b",
-    twitterLink: "https://twitter.com/shreyashree_",
-  },
+
   {
     name: "Mansi Aggarwal",
     title: "Developer, Web Team",
@@ -71,13 +73,7 @@ export const web_team = [
     linkedIn: "https://www.linkedin.com/in/divyanshushukladev02",
     twitterLink: "https://twitter.com/dvsh02",
   },
-  {
-    name: "Karan Bhatia",
-    title: "Developer, Web Team",
-    imageUrl: "/teamPic/karan.JPG",
-    linkedIn: "https://www.linkedin.com/in/karanbhatia3420/",
-    twitterLink: "https://twitter.com/karanbhatia_",
-  },
+
 
   {
     name: "Yusuf",
@@ -96,14 +92,7 @@ export const web_team = [
 ];
 
 export const graphic_team = [
-  {
-    name: "Vedant Sharma",
-    title: "Content & Graphics Team",
-    imageUrl: "/teamPic/vedant.JPG",
-    linkedIn:
-      "https://www.linkedin.com/in/vedant-sharma-477640190?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    twitterLink: "",
-  },
+
   // {
   //   name: "Shreya Shree",
   //   title: "Graphic Designer",
@@ -123,23 +112,38 @@ export const graphic_team = [
 export const ui_team = [
   {
     name: "Varun Jaiswal",
-    title: "Graphic Designer",
+    title: "UI/UX Designer",
     imageUrl: "/teamPic/varun.JPG",
     linkedIn: "https://www.linkedin.com/in/varun-jaiswal-19581726b/",
     twitterLink: "",
   },
   {
     name: "Tushar Thakryan",
-    title: "Graphic Designer",
+    title: "UI/UX Designer",
     imageUrl: "/teamPic/tushar.JPG",
     linkedIn: "https://www.linkedin.com/in/tushar-thakryan-aa1b892aa/",
     twitterLink: "https://twitter.com/tushar_thakryan",
   },
   {
     name: "Harsh Rajput",
-    title: "Graphic Designer",
+    title: "UI/UX Designer",
     imageUrl: "/teamPic/harsh.JPG",
     linkedIn: "",
+    twitterLink: "",
+  },
+  {
+    name: "Shreya Shree",
+    title: "Content & Graphics Team",
+    imageUrl: "/teamPic/shreya.JPG",
+    linkedIn: "https://www.linkedin.com/in/shreya-shree-a0427427b",
+    twitterLink: "https://twitter.com/shreyashree_",
+  },
+  {
+    name: "Vedant Sharma",
+    title: "Content & Graphics Team",
+    imageUrl: "/teamPic/vedant.JPG",
+    linkedIn:
+      "https://www.linkedin.com/in/vedant-sharma-477640190?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     twitterLink: "",
   },
   // {
