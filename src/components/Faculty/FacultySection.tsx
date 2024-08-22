@@ -1,5 +1,5 @@
 "use client";
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import FacultyCard from "../Faculty/FacultyCard";
 
 const FacultySection: React.FC = () => {
@@ -23,7 +23,7 @@ const FacultySection: React.FC = () => {
   };
 
   const handleCardClick = (faculty: string) => {
-    if(hoveredFaculty) return setHoveredFaculty(null);
+    if (hoveredFaculty) return setHoveredFaculty(null);
     setHoveredFaculty(faculty);
   };
   const handleMouseLeave = () => {
@@ -35,9 +35,8 @@ const FacultySection: React.FC = () => {
     <div className="min-w-full ">
       {/* Main container for faculty section */}
       <div
-        className={` p-8 bg-transparent border-none rounded-none raleway-font min-w-full  transition-all duration-1000 ${
-          hoveredFaculty == null ? "h-[700px]" : "h-[500px]"
-        } md:bg-white md:border-black md:border-[15px] md:rounded-[90px]`}
+        className={` p-8 bg-transparent border-none rounded-none raleway-font min-w-full  transition-all duration-1000 ${hoveredFaculty == null ? "h-[700px]" : "h-[500px]"
+          } md:bg-white md:border-black md:border-[15px] md:rounded-[90px]`}
       >
         <h2 className="text-6xl px-20 py-5 font-bold mb-6 md:text-black text-white">Faculty</h2>
         {/* Container for faculty cards */}
@@ -54,12 +53,11 @@ const FacultySection: React.FC = () => {
               name="Dr. Arvinder Kaur"
               className={`
                 transition-all duration-1000
-                ${
-                hoveredFaculty === "rahul"
+                ${hoveredFaculty === "rahul"
                   ? "-translate-x-full scale-y-75 opacity-0"
                   : ""
-              } md:text-black text-white `}
-              hovered={screenWidth>=700 ? hoveredFaculty :null}
+                } md:text-black text-white `}
+              hovered={screenWidth >= 700 ? hoveredFaculty : null}
             />
           </div>
           {/* Dr. Rahul Johari's card */}
@@ -74,12 +72,11 @@ const FacultySection: React.FC = () => {
               name="Dr. Rahul Johari"
               className={`
                 transition-all duration-1000
-                ${
-                hoveredFaculty == "arvinder"
+                ${hoveredFaculty == "arvinder"
                   ? "translate-x-full scale-y-75 opacity-0 "
                   : ""
-              } md:text-black text-white  `}
-              hovered={screenWidth>=700 ? hoveredFaculty :null}
+                } md:text-black text-white  `}
+              hovered={screenWidth >= 700 ? hoveredFaculty : null}
             />
           </div>
         </div>

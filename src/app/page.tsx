@@ -22,14 +22,16 @@ export default function Home() {
 
   return (
     <div>
-      {/* <Navbar /> */} 
-       <HeroBanner />
-      <AboutUs /> 
+      {/* <Navbar /> */}
+      <HeroBanner />
+      <AboutUs />
 
       <main className="flex min-h-screen flex-col items-center justify-between bg-black">
         <PhotoAlbum />
         <EventsPage />
-        <FacultySection />
+        <div className="max-w-full lg:w-[1400px]">
+          <FacultySection />
+        </div>
         <Footer />
       </main>
       {/* <ShootingStars/> */}

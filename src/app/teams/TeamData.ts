@@ -15,8 +15,8 @@ export const core_team = [
   },
   {
     name: "Satyam Jha",
-    title: "Web Lead, SDC USAR",
-    imageUrl: "/teamPic/satyam.JPG",
+    title: "Tech Lead, SDC USAR",
+    imageUrl: "/teamPic/satyam1.jpg",
     linkedIn: "https://www.linkedin.com/in/satyam-jha-2abb28224/",
     twitterLink: "https://twitter.com/Satyam_codes",
   },
@@ -52,7 +52,7 @@ export const web_team = [
   },
   {
     name: "Shreya Shree",
-    title: "Developer, Web Team",
+    title: "Content & Graphics Team",
     imageUrl: "/teamPic/shreya.JPG",
     linkedIn: "https://www.linkedin.com/in/shreya-shree-a0427427b",
     twitterLink: "https://twitter.com/shreyashree_",
@@ -98,7 +98,7 @@ export const web_team = [
 export const graphic_team = [
   {
     name: "Vedant Sharma",
-    title: "Graphic Designer",
+    title: "Content & Graphics Team",
     imageUrl: "/teamPic/vedant.JPG",
     linkedIn:
       "https://www.linkedin.com/in/vedant-sharma-477640190?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
@@ -113,7 +113,7 @@ export const graphic_team = [
   // },
   {
     name: "Manika Sethi",
-    title: "Graphic Designer",
+    title: "App Developer",
     imageUrl: "/teamPic/manika.JPG",
     linkedIn: "https://www.linkedin.com/in/manika-sethi",
     twitterLink: "",

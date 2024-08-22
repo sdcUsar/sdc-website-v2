@@ -15,7 +15,7 @@ export default function RootLayout({
       <head></head>
       <body
         className={cn(
-          "grainy min-h-screen font-sans antialiased",
+          "grainy min-h-screen w-full font-sans antialiased overflow-x-hidden",
           inter.className
         )}
       >

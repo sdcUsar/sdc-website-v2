@@ -18,7 +18,8 @@ type Link = {
     alt: string;
     width: number;
     height: number;
-  };};
+  };
+};
 
 type Props = {
   links: Link[];
@@ -46,7 +47,7 @@ const MenuOverlay: React.FC<Props> = ({ links, closeNavbar }) => {
   };
 
   return (
-    <div className="inset-0 bg-black bg-opacity-100 z-20">
+    <div className="inset-0 bg-black bg-opacity-100 z-20 overflow-x-hidden">
       <Sheet open={isOpen} onOpenChange={handleOpenChange}>
         <SheetContent className="bg-[#FFFFFF] m-0 border-l-[0.5px] border-b-[0.5px] bg-opacity-10 backdrop-blur-sm transition-all duration-300 ease-in-out">
           <button
@@ -66,16 +67,16 @@ const MenuOverlay: React.FC<Props> = ({ links, closeNavbar }) => {
             })}
           </ul>
           <Link href="/hackedcode" target="_blank">
-          <Image
+            <Image
               src="/svg/hackedcode.png"
               alt="University Logo"
               width={100}
               height={100}
               className="w-full "
             />
-            
+
           </Link>
-          
+
         </SheetContent>
       </Sheet>
     </div>

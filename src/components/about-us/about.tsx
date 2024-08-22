@@ -1,3 +1,4 @@
+import Link from "next/link";
 import SocialMediaTransition from "./icon";
 export default function AboutUs() {
   return (
@@ -6,13 +7,13 @@ export default function AboutUs() {
         {/* About Us Section */}
         <div className="grid grid-flow-col h-fit">
 
-        <div className="  justify-evenly space-y-8 lg:space-y-12 mb-10 lg:mb-20">
-        <h1 className="font-semibold text-3xl lg:text-4xl">About us</h1>
-        <p className="text-left md:text-justify h-fit text-base sm:text-lg lg:text-3xl text-gray-300 leading-relaxed">
-  Our department leads GGSIPU&rsquo;s digital transformation, creating software to enhance faculty and student operations. With top students, we streamline tasks, improve management, and connect the campus, driving educational innovation and efficiency.
-</p>
+          <div className="  justify-evenly space-y-8 lg:space-y-12 mb-10 lg:mb-20">
+            <h1 className="font-semibold text-3xl lg:text-4xl">About us</h1>
+            <p className="text-left md:text-justify h-fit text-base sm:text-lg lg:text-3xl text-gray-300 leading-relaxed">
+              Our department leads GGSIPU&rsquo;s digital transformation, creating software to enhance faculty and student operations. With top students, we streamline tasks, improve management, and connect the campus, driving educational innovation and efficiency.
+            </p>
 
-        </div>
+          </div>
           <div className="grid grid-flow-col w-24 md:hidden ">
             <SocialMediaTransition />
           </div>
@@ -25,7 +26,9 @@ export default function AboutUs() {
                 <h1 className="uppercase">become a member</h1>
                 <button className="items-center uppercase bg-black border hover:bg-white hover:duration-500
                  hover:text-black delay-200 border-white px-10 py-2 md:text-3xl">
-                  JOIN US
+                  <Link href={"https://forms.gle/JpfMdWq38UNuufbb6"} target="_blank">
+                    JOIN US
+                  </Link>
                 </button>
               </div>
             </div>
