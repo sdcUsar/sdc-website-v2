@@ -16,7 +16,7 @@ export const core_team = [
   {
     name: "Satyam Jha",
     title: "Tech Lead, SDC USAR",
-    imageUrl: "/teamPic/satyam1.jpg",
+    imageUrl: "/teamPic/satyam.JPG",
     linkedIn: "https://www.linkedin.com/in/satyam-jha-2abb28224/",
     twitterLink: "https://twitter.com/Satyam_codes",
   },

@@ -18,22 +18,19 @@ const SocialMediaTransition: React.FC = () => {
           <button
             onClick={handleToggle}
             className={`relative md:absolute  text-4xl md:text-7xl text-white 
-              transition-transform duration-500 ease-in-out ${
-              visible ? "-rotate-45" : "rotate-0"
-            }`}
+              transition-transform duration-500 ease-in-out ${visible ? "-rotate-45" : "rotate-0"
+              }`}
           >
             +
           </button>
           <div
             className={`flex flex-col md:flex-row space-y-7 md:space-y-0 md:space-x-7 align-middle 
               items-center justify-center transition-transform duration-[2.8s] ease-in-out 
-              ${
-                visible ? "translate-y-10 md:translate-y-0 delay-100" : "translate-y-5 md:translate-y-0 opacity-0"
-              }  ${
-               visible ? "md:translate-x-10 delay-100" : "md:translate-x-5 opacity-0"
-             } md:ml-7`}
+              ${visible ? "translate-y-10 md:translate-y-0 delay-100" : "translate-y-5 md:translate-y-0 opacity-0"
+              }  ${visible ? "md:translate-x-10 delay-100" : "md:translate-x-5 opacity-0"
+              } md:ml-7`}
           >
-            <a href="#" className="p-1 bg-white rounded-2xl">
+            <a href="https://www.instagram.com/sdc_ggsipu_uss/" target="_blank" className="p-1 bg-white rounded-2xl">
               <div className="group transition-all ease-in-out">
                 <Image
                   priority
@@ -53,7 +50,7 @@ const SocialMediaTransition: React.FC = () => {
                 />
               </div>
             </a>
-            <a href="#" className="p-1 bg-white rounded-2xl">
+            <a href="https://www.linkedin.com/company/sdc-ggsipu-uss/" target="_blank" className="p-1 bg-white rounded-2xl">
               <div className="group transition-all duration-700 ease-in-out delay-200">
                 <Image
                   priority
@@ -73,7 +70,7 @@ const SocialMediaTransition: React.FC = () => {
                 />
               </div>
             </a>
-            <a href="#" className="p-1 bg-white rounded-2xl">
+            <a href="https://x.com/SDC_USS" target="_blank" className=" p-1 bg-white rounded-2xl">
               <div className="group transition-all duration-700 ease-in-out delay-200">
                 <Image
                   priority
@@ -93,7 +90,7 @@ const SocialMediaTransition: React.FC = () => {
                 />
               </div>
             </a>
-            <a href="#" className="p-1 bg-white rounded-2xl">
+            <a href="https://github.com/SDC-USAR" target="_blank" className="p-1 bg-white rounded-2xl">
               <div className="group transition-all duration-700 ease-in-out delay-200">
                 <Image
                   priority
@@ -113,7 +110,7 @@ const SocialMediaTransition: React.FC = () => {
                 />
               </div>
             </a>
-            <a href="#" className="p-1 bg-white rounded-2xl">
+            <a href="https://discord.com/channels/1203049118214393856/1203049119627616319" target="_blank" className="p-1 bg-white rounded-2xl">
               <div className="group transition-all duration-700 ease-in-out delay-200">
                 <Image
                   priority
@@ -135,7 +132,7 @@ const SocialMediaTransition: React.FC = () => {
             </a>
           </div>
         </div>
-      </div>
+      </div >
     </>
   );
 };
